@@ -55,8 +55,8 @@ class Person {
         
         lastName = Person.lastName[Int(arc4random_uniform(UInt32(Person.lastName.count)))]
         fullName = lastName + " " +  middleName + " " + firstName
-        mobilePhone = Person.arr09x[Int(arc4random_uniform(UInt32(Person.arr09x.count)))] + " " + "\(100000000 / arc4random_uniform(90))"
-        
+        mobilePhone = Person.arr09x[Int(arc4random_uniform(UInt32(Person.arr09x.count)))] + " " + "\(100000000 / (arc4random_uniform(90) + 11))"
+//
     }
     
     
