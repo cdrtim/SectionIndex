@@ -14,13 +14,13 @@ class Person {
     static var lastName: [String]!
     static var arrMidNameMen: [String]!
     static var arrMidNameWomen: [String]!
-    
+    static var arr09x: [String]!
     
     var fullName: String!
     var lastName: String!
     var firstName: String!
     var middleName: String!
-    
+    var mobilePhone: String!
     
     static var isCheck: Bool = true
     
@@ -34,7 +34,7 @@ class Person {
             Person.arrMidNameWomen = ["Thị", "Ngọc", "Thuỳ"]
             Person.lastName = ["Hoàng", "Trần", "Nguyễn", "Đặng", "Phạm", "Trịnh", "Đỗ", "Đinh", "Lê", "Vũ", "Bùi", "Hồ", "Ngô",  "Dương", "Lý", "Lương", "Doãn"]
             
-            //     Person.arr09x = ["091", "092", "093", "094", "096", "097", "098", "(04)-", "(08)-"]
+            Person.arr09x = ["091", "092", "093", "094", "096", "097", "098", "(04)-", "(08)-"]
             
             Person.isCheck = false
             
@@ -47,15 +47,15 @@ class Person {
             firstName = Person.arrFirstNameWomen[Int(arc4random_uniform(UInt32(Person.arrFirstNameWomen.count)))]
             
         }else {
-        
+            
             middleName = Person.arrMidNameMen[Int(arc4random_uniform(UInt32(Person.arrMidNameMen.count)))]
             firstName = Person.arrFirstNameMen[Int(arc4random_uniform(UInt32(Person.arrFirstNameMen.count)))]
-        
+            
         }
         
         lastName = Person.lastName[Int(arc4random_uniform(UInt32(Person.lastName.count)))]
         fullName = lastName + " " +  middleName + " " + firstName
-        
+        mobilePhone = Person.arr09x[Int(arc4random_uniform(UInt32(Person.arr09x.count)))] + " " + "\(100000000 / arc4random_uniform(90))"
         
     }
     

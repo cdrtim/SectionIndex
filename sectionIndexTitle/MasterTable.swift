@@ -22,6 +22,7 @@ class MasterTable: UITableViewController {
         arrayData.addObjects(from: [Person()])
             let person =  arrayData[i] as! Person
             print(person.fullName)
+            print(person.mobilePhone)
             
         }
     }
